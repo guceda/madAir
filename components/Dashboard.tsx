@@ -15,7 +15,7 @@ let points = [{latitude: 6.83646681, longitude: 79.77121907, weight: 1},
 ];
 
 const data = [
-    <Map data={points}/>,
+    <Map points={points}/>,
     <Text>hola1</Text>,
     <Text>hola1</Text>,
     <Text>hola1</Text>,

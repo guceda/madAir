@@ -4,8 +4,6 @@ import React from 'react';
 import MapView, { Heatmap } from 'react-native-maps';
 import { StyleSheet } from 'react-native';
 
-
-
 interface DensityMarkers {
     latitude: number,
     longitude: number,
