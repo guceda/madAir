@@ -29,7 +29,7 @@ export default function Line(conf, data) {
                 withDots={conf.withDots}
                 withInnerLines={conf.withInnerLines}
                 withOuterLines={conf.withOuterLines}
-                width={Dimensions.get("window").width - 30} // from react-native
+                width={Dimensions.get("window").width - 50} // from react-native
                 height={conf.height}
                 yAxisLabel="$"
                 yAxisSuffix="k"

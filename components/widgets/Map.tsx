@@ -4,6 +4,7 @@ import React from 'react';
 import MapView, { Heatmap } from 'react-native-maps';
 import { StyleSheet, View } from 'react-native';
 import TextInfo from './TextInfo';
+import mapStyle from './mapsStyle';
 
 interface DensityMarkers {
     latitude: number,
@@ -25,6 +26,7 @@ export default function Map(conf, data) {
                 subtitle={conf.subtitle}
             />
         <MapView
+            customMapStyle={mapStyle}
             style={styles.map(conf.height)}
             {...conf.chartConfig}
         >

@@ -39,9 +39,9 @@ export default {
             chartConfig: {
                 backgroundColor: "white",
                 backgroundGradientFrom: "white",
-                backgroundGradientTo: "whitesmoke",
+                backgroundGradientTo: "white",
                 decimalPlaces: 0, // optional, defaults to 2dp
-                color: (opacity = 1) => `lightblue`,
+                color: (opacity = 1) => `#FFDC00`,
                 labelColor: (opacity = 1) => `silver`,
             }
         },
@@ -56,9 +56,29 @@ export default {
             chartConfig: {
                 backgroundColor: "white",
                 backgroundGradientFrom: "white",
-                backgroundGradientTo: "whitesmoke",
+                backgroundGradientTo: "white",
                 decimalPlaces: 0, // optional, defaults to 2dp
                 color: (opacity = 1) => `rgb(173, 216, 230, ${opacity})`,
+                labelColor: (opacity = 1) => `silver`,
+            }
+        },
+        {
+            type: 'line',
+            id: 'line1',
+            header: 'Day',
+            title: 'Pollution by day',
+            subtitle: '',
+            height: 220,
+            data: 'line0',
+            withDots: false,
+            withInnerLines: false,
+            withOuterLines: false,
+            chartConfig: {
+                backgroundColor: "white",
+                backgroundGradientFrom: "white",
+                backgroundGradientTo: "white",
+                decimalPlaces: 0, // optional, defaults to 2dp
+                color: (opacity = 1) => `lightgreen`,
                 labelColor: (opacity = 1) => `silver`,
             }
         },

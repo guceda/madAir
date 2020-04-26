@@ -23,7 +23,7 @@ export default function Line(conf, data) {
             />
         <ProgressChart
             data={data}
-            width={Dimensions.get("window").width}
+            width={Dimensions.get("window").width - 50} // from react-native
             height={220}
             strokeWidth={16}
             radius={32}
