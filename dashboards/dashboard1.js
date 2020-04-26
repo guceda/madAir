@@ -3,7 +3,7 @@ export default {
         {
             type: 'map',
             height: 300,
-            data: 'mapPoints',
+            data: 'map0',
             chartConfig: {
                 initialRegion: {
                     latitude: 6.82646681,
@@ -16,7 +16,26 @@ export default {
         {
             type: 'line',
             height: 220,
-            data: 'chart',
+            data: 'line0',
+            chartConfig: {
+                backgroundColor: "#e26a00",
+                backgroundGradientFrom: "#fb8c00",
+                backgroundGradientTo: "#ffa726",
+                decimalPlaces: 2, // optional, defaults to 2dp
+                color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                propsForDots: {
+                    r: "6",
+                    strokeWidth: "2",
+                    stroke: "#ffa726"
+                }
+
+            }
+        },
+        {
+            type: 'progress',
+            height: 220,
+            data: 'progress0',
             chartConfig: {
                 backgroundColor: "#e26a00",
                 backgroundGradientFrom: "#fb8c00",

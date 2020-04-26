@@ -14,7 +14,7 @@ import { Dimensions } from 'react-native';
 
 
 
-export default function Chart(conf, data) {
+export default function Line(conf, data) {
     return (
         <LineChart
             data={data}

@@ -1,6 +1,6 @@
 
 export default {
-    mapPoints: [
+    map0: [
         { latitude: 6.83646681, longitude: 79.77121907, weight: 1 },
         { latitude: 6.82776681, longitude: 79.871319, weight: 1 },
         { latitude: 6.82176681, longitude: 79.871319, weight: 1 },
@@ -8,7 +8,7 @@ export default {
         { latitude: 6.83176681, longitude: 79.871319, weight: 1 },
         { latitude: 6.83976681, longitude: 79.861319, weight: 1 },
     ],
-    chart: {
+    line0: {
         labels: ["January", "February", "March", "April", "May", "June"],
         datasets: [
             {
@@ -22,5 +22,9 @@ export default {
                 ]
             }
         ]
+    },
+    progress0: {
+        labels: ["C02", "Methane", "Run"], // optional
+        data: [0.4, 0.6, 0.8]
     },
 }
