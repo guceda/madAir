@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { ReactNode } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 interface IProps {
     children: ReactNode;
@@ -10,6 +10,7 @@ interface IProps {
 export default function ListEntry({ children }: IProps) {
     return (
         <View style={styles.item}>
+            <Text>Hola</Text>
             {children}
         </View>
     );
@@ -17,7 +18,8 @@ export default function ListEntry({ children }: IProps) {
 
 const styles = StyleSheet.create({
     item: {
-        backgroundColor: 'lightblue',
+        backgroundColor: 'white',
+        padding: 20,
         overflow: 'hidden',
         marginVertical: 8,
         marginHorizontal: 16,

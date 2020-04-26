@@ -7,22 +7,18 @@ import dashboard1 from './dashboards/dashboard1';
 
 export default function App() {
   return (
-      <Dashboard config={dashboard1}/>
+    <View style={styles.container}>
+      <Dashboard config={dashboard1} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    padding: 10,
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  map: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
   },
 });
