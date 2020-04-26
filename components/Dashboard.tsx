@@ -7,6 +7,7 @@ import ScrollableList from './ScrollableList';
 import Map from './widgets/Map';
 import Chart from './widgets/Line';
 import Progress from './widgets/Progress';
+import TextInfo from './widgets/TextInfo';
 
 import mockdata from '../mock/mockdata';
 
@@ -23,6 +24,7 @@ interface WidgetsConfiguration {
 }
 
 const widgets: Widgets = {
+    text: TextInfo,
     map: Map,
     line: Chart,
     progress: Progress,

@@ -14,6 +14,10 @@ export default {
             }
         },
         {
+            type: 'text',
+            data: 'line0',
+        },
+        {
             type: 'line',
             height: 220,
             data: 'line0',
