@@ -34,18 +34,12 @@ export default {
             height: 220,
             data: 'progress0',
             chartConfig: {
-                backgroundColor: "#e26a00",
-                backgroundGradientFrom: "#fb8c00",
-                backgroundGradientTo: "#ffa726",
-                decimalPlaces: 2, // optional, defaults to 2dp
-                color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                propsForDots: {
-                    r: "6",
-                    strokeWidth: "2",
-                    stroke: "#ffa726"
-                }
-
+                backgroundColor: "white",
+                backgroundGradientFrom: "white",
+                backgroundGradientTo: "whitesmoke",
+                decimalPlaces: 0, // optional, defaults to 2dp
+                color: (opacity = 1) => `rgb(173, 216, 230, ${opacity})`,
+                labelColor: (opacity = 1) => `silver`,
             }
         },
     ]
