@@ -9,13 +9,18 @@ import {
     ContributionGraph,
     StackedBarChart
 } from "react-native-chart-kit";
-import { Dimensions } from 'react-native';
-
-
+import { Dimensions, View } from 'react-native';
+import TextInfo from './TextInfo';
 
 
 export default function Line(conf, data) {
     return (
+        <View>
+         <TextInfo
+                header={conf.header}
+                title={conf.title}
+                subtitle={conf.subtitle}
+            />
         <ProgressChart
             data={data}
             width={Dimensions.get("window").width}
@@ -25,5 +30,6 @@ export default function Line(conf, data) {
             chartConfig={conf.chartConfig}
             hideLegend={false}
         />
+        </View>
     );
 }

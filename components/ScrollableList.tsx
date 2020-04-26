@@ -16,7 +16,7 @@ export default function ScrollableList({ data }: IProps) {
         <SafeAreaView style={styles.container}>
             <FlatList
                 data={data}
-                renderItem={({ item }) => <ListEntry>{item}</ListEntry>}
+                renderItem={({ item }) => <ListEntry >{item}</ListEntry>}
             //keyExtractor={item => item.id}
             />
         </SafeAreaView>

@@ -4,13 +4,14 @@ import React, { ReactNode } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
 
-export default function TextInfo(conf, data) {
-    const { title, col, row, alignRight } = styles;
-    const col2 = { ...col, ...alignRight };
+export default function TextInfo({ header, title, subtitle }) {
     return (
-        <View style={row}>
-            <Text style={col}>Info 1</Text>
-            <Text style={col2}>Info 2</Text>
+        <View>
+            <Text style={styles.title}>{header}</Text>
+            <View style={styles.row}>
+                <Text style={styles.col}>{title}</Text>
+                <Text style={{ ...styles.col, ...styles.alignRight }}>{subtitle}</Text>
+            </View>
         </View>
     );
 }

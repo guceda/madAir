@@ -2,6 +2,10 @@ export default {
     widgets: [
         {
             type: 'map',
+            id: 'map0',
+            header: 'Today',
+            title: 'Pollution by unit',
+            subtitle: '356mm max',
             height: 300,
             data: 'map0',
             chartConfig: {
@@ -15,10 +19,18 @@ export default {
         },
         {
             type: 'text',
+            header: 'Today',
+            title: 'Average',
+            subtitle: '560mm',
+            id: 'text0',
             data: 'line0',
         },
         {
             type: 'line',
+            id: 'line0',
+            header: 'Week',
+            title: 'Average Pollution',
+            subtitle: '',
             height: 220,
             data: 'line0',
             withDots: false,
@@ -36,6 +48,10 @@ export default {
         {
             type: 'progress',
             height: 220,
+            header: 'Today',
+            title: 'By component',
+            subtitle: '',
+            id: 'progress0',
             data: 'progress0',
             chartConfig: {
                 backgroundColor: "white",

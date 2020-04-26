@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { ReactNode } from 'react';
+import TextInfo from './TextInfo';
 import {
     LineChart,
     BarChart,
@@ -15,7 +16,14 @@ import { Dimensions, View } from 'react-native';
 
 
 export default function Line(conf, data) {
+    console.log('cooooo', conf);
     return (
+        <View>
+            <TextInfo
+                header={conf.header}
+                title={conf.title}
+                subtitle={conf.subtitle}
+            />
             <LineChart
                 data={data}
                 withDots={conf.withDots}
@@ -29,5 +37,7 @@ export default function Line(conf, data) {
                 chartConfig={conf.chartConfig}
                 bezier
             />
+        </View>
     );
+
 }

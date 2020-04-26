@@ -2,7 +2,8 @@
 
 import React from 'react';
 import MapView, { Heatmap } from 'react-native-maps';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import TextInfo from './TextInfo';
 
 interface DensityMarkers {
     latitude: number,
@@ -17,6 +18,12 @@ interface IProps {
 
 export default function Map(conf, data) {
     return (
+        <View>
+             <TextInfo
+                header={conf.header}
+                title={conf.title}
+                subtitle={conf.subtitle}
+            />
         <MapView
             style={styles.map(conf.height)}
             {...conf.chartConfig}
@@ -27,7 +34,7 @@ export default function Map(conf, data) {
                 radius={50}
             />
         </MapView>
-
+        </View>
     );
 }
 

@@ -9,14 +9,9 @@ interface IProps {
 
 export default function ListEntry({ children }: IProps) {
     const { item, title, col, row, alignRight } = styles;
-    const col2 = {...col, ...alignRight};
+    const col2 = { ...col, ...alignRight };
     return (
         <View style={item}>
-            <Text style={title}>Today</Text>
-            <View style={row}>
-                <Text style={col}>Pollution by hour</Text>
-                <Text style={col2}>300 max</Text>
-            </View>
             {children}
         </View>
     );
@@ -47,6 +42,6 @@ const styles = StyleSheet.create({
         color: '#484848'
     },
     alignRight: {
-        textAlign: 'right', 
+        textAlign: 'right',
     },
 });
