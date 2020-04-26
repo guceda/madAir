@@ -1,26 +1,36 @@
 'use strict';
 
-import React from 'react';
-import { Text } from 'react-native';
+import React, { ReactNode } from 'react';
 
 import ScrollableList from './ScrollableList';
 import Map from './Map';
+import Chart from './Chart';
+import mockdata from '../mock/mockdata';
 
-let points = [{latitude: 6.83646681, longitude: 79.77121907, weight: 1},
-    {latitude: 6.82776681, longitude: 79.871319, weight: 1},
-    {latitude: 6.82176681, longitude: 79.871319, weight: 1},
-    {latitude: 6.83776681, longitude: 79.871319, weight: 1},
-    {latitude: 6.83176681, longitude: 79.871319, weight: 1},
-    {latitude: 6.83976681, longitude: 79.861319, weight: 1},
-];
 
-const data = [
-    <Map points={points}/>,
-    <Text>hola1</Text>,
-    <Text>hola1</Text>,
-    <Text>hola1</Text>,
-    <Text>hola1</Text>,
-    <Text>hola1</Text>,
-];
+interface WidgetConfiguration {
+    type: string,
+    height: number,
+    data: string,
+    chartConfig: object,
+}
 
-export default () => <ScrollableList data={data}/>
+interface WidgetsConfiguration {
+    widgets: Array<WidgetConfiguration>
+}
+
+const widgets: Widgets = {
+    map: Map,
+    line: Chart,
+};
+
+
+function fillDashboard(config: WidgetsConfiguration) {
+    return config.widgets.map(me => widgets[me.type](me, mockdata[me.data]));
+}
+
+
+export default function Dashboard ({ config }) {
+    const data0 = fillDashboard(config);
+    return <ScrollableList data={data0} />
+}

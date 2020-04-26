@@ -15,22 +15,17 @@ interface IProps {
 }
 
 
-export default function Map({ points }: IProps) {
+export default function Map(conf, data) {
     return (
-        <MapView style={styles.map}
-            initialRegion={{
-                latitude: 6.82646681,
-                longitude: 79.87121907,
-                latitudeDelta: 0.09,
-                longitudeDelta: 0.0121
-            }}
+        <MapView
+            style={styles.map(conf.height)}
+            {...conf.chartConfig}
         >
             <Heatmap
-                points={points}
+                points={data}
                 opacity={0.5}
                 radius={50}
             />
-
         </MapView>
 
     );
@@ -39,7 +34,7 @@ export default function Map({ points }: IProps) {
 
 
 const styles = StyleSheet.create({
-    map: {
-        height: 300,
-    },
+    map: h => ({
+        height: h,
+    }),
 });
